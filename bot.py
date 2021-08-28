@@ -1,6 +1,5 @@
-from __future__ import unicode_literals
 from telegram.ext import *
-from pytube import YouTube
+
 api_key="1999704554:AAGgpjH1X6kLY80jfZdartzShCUouVo8zFE"
 print('bot started')
 
@@ -11,8 +10,10 @@ def help_command(update,context):
 
 def sample_response(text_input):
     user_message=str(text_input).lower()
-    yt = YouTube(user_message)
-    return ("Title: ",yt.title,"Number of views: ",yt.views,"Length of video: ",yt.length,"Rating of video: ",yt.rating)
+    if user_message == 'shayan' or user_message == 'sajad':
+        return 'hello master'
+    else:
+        return 'hooosh'
 
 def handle_message(update,context):
     text=str(update.message.text)
