@@ -1,6 +1,6 @@
 from telegram.ext import *
 
-api_key="1777223953:AAHR0WuIhxYRV6ZbJmOAd_2H8648jtxeG_E"
+api_key="1999704554:AAGgpjH1X6kLY80jfZdartzShCUouVo8zFE"
 print("bot started")
 
 def start_command(update,context):
