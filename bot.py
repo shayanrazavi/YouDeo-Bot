@@ -13,12 +13,6 @@ def sample_response(text_input):
     user_message=str(text_input).lower()
     yt = YouTube(user_message)
     return ("Title: ",yt.title,"Number of views: ",yt.views,"Length of video: ",yt.length,"Rating of video: ",yt.rating)
-    ys = yt.streams.get_highest_resolution()
-    
-    #Starting download
-    print("Downloading...")
-    ys.download()
-    print("Download completed!!")
 
 def handle_message(update,context):
     text=str(update.message.text)
