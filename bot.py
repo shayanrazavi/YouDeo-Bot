@@ -14,7 +14,7 @@ def sample_response(text_input):
     #HI-->hi
     if user_message in ("hi","hello"):
         return ("how are you")
-    return "I dont understand you"
+    return "I dont understand you. hoooooooooooooooooooooooooooooy!"
 
 def handle_message(update,context):
     text=str(update.message.text)    
