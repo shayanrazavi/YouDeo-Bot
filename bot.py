@@ -1,4 +1,6 @@
+from __future__ import unicode_literals
 from telegram.ext import *
+import youtube_dl
 
 api_key="1999704554:AAGgpjH1X6kLY80jfZdartzShCUouVo8zFE"
 print('bot started')
@@ -10,10 +12,9 @@ def help_command(update,context):
 
 def sample_response(text_input):
     user_message=str(text_input).lower()
-    if user_message == 'shayan' or user_message == 'sajad':
-        return 'hello master'
-    else:
-        return 'hooosh'
+    ydl_opts = {}
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        return ydl.download([user_message])
 
 def handle_message(update,context):
     text=str(update.message.text)
